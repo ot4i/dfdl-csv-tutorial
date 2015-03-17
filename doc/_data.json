@@ -1,0 +1,340 @@
+{
+  "version":"0.5",
+    "pageContent": 
+	{
+        "_comments": "JSON object that contains data for page labels, buttons, etc.",
+        "navItems": 
+		{
+            "_common": 
+			{
+                "buttonBackToGallery": 
+				{
+                    "name": "Back To Gallery",
+					"method": "backToGallery()",
+					"idName": "backToGallery"	
+                },
+                "buttonStartTutorial": 
+				{
+                    "name": "Start Tutorial",
+					"method": "startTutorialFromDetailsScreen()",
+					"idName": "startTutorial"
+                }
+            }
+        }
+    },
+  "tutorial":{
+    "_common":{
+      "name":"Modeling CSV data using DFDL",
+      "shortDescription":"Learn how to model CSV data using DFDL by exploring this simple example.",
+      "durationText":"This tutorial takes approximately",
+      "durationTime":"10 minutes",
+      "_resourceToOpenComment":"The ID of the first resource to open when the user imports the tutorial. Resource IDs are defined in the repo_metadata.json Tutorials listing on ot4i.",
+      "resourceToOpen":"MainSchema",
+      "helpLink": 
+	{
+           "text": "IBM Knowledge Center",
+           "link": "/com.ibm.etools.msgbroker.helphome.doc/help_home_msgbroker.htm"
+        }
+    },
+    "pageDetails":{
+      "topicsName":"Tutorial Topics",
+      "_topicListComment":"A short list of product concepts or tasks demonstrated by this tutorial",
+      "topicList":[
+        {
+          "title":"Modeling CSV messages"
+        },
+        {
+          "title":"Editing DFDL schema"
+        },
+        {
+          "title":"Testing DFDL schema"
+        }
+      ],
+      "outcomesName":"Learning outcomes",
+      "_outcomesComment":"A description of what the user will have learned or accomplished by running this tutorial.",
+      "outcomeList":[
+        {
+          "title":"Use the DFDL editor to model and parse CSV data."
+        }
+      ],
+      "summary":{
+        "overviewName":"OVERVIEW",
+        "_overviewComment":"A short description of what happens in this tutorial, and an optional short explanation of the IIB concepts used in this tutorial if necessary for context. What background knowledge must the user have for this to make sense?",
+        "sections":[
+          {
+            "section":"This tutorial demonstrates the modeling of Comma Separated Values (CSV) data using DFDL schema."
+          }  
+        ]
+      }
+    },
+    "pageSteps":{
+      "concept":{
+        "overview":{
+          "name":"Overview",
+          "heading":"Overview",
+          "_overviewComment":"A short description of what this tutorial does, and what the user will do to run the tutorial.",
+        "sections":[
+          {
+            "section":" CSV is a data format for storing tabular data in the form of text records. For example, it can be used as an export format for spreadsheets and databases. "
+          },
+          {
+            "section":" A CSV file consists of any number of records, each terminated by a new line of some kind. Each record consists of fields, separated by a literal comma. All records have an identical sequence of fields, and the first record is often a header. Double quotes are used to 'escape' fields that contain a literal comma or new line as part of their value."
+          }
+          ]
+        },
+        "helpLinks":{
+          "title":"Find out more",
+          "details":[
+            {
+              "title":"Knowledge Center link to ",
+              "description":"Message modeling overview",
+              "link":"com.ibm.etools.mft.doc/bd40430_.htm"
+            },
+            {
+              "title":"Knowledge Center link to ",
+              "description":"How to model data with DFDL",
+              "link":"com.ibm.etools.mft.doc/df20125_.htm"
+            },
+            {
+              "title":"Knowledge Center link to ",
+              "description":"CSV messaging standard",
+              "link":"com.ibm.etools.mft.doc/ad20830_.htm"
+            }
+          ]
+        }
+      },
+      "create":{
+        "overview":{
+          "name":"Create",
+          "heading":"Import projects",
+          "_createComment":"A description of what will happen when the user clicks Import.",
+          "sections":[
+            {
+              "section":"Click 'Import' and a shared library is imported into your workspace."
+            },
+            {
+              "section":"Library CommaSeparatedValues contains an example CSV file in 'Other resources'. Open the file and look at the records. The first record is a header, and there are five fields in each record; last name, first name, middle name, address and date of birth. Note that address has double quotes so that the comma in the address is not treated as a delimiter."
+            },
+            {
+              "section":"You will now create a DFDL schema to model the example CSV file, using the New Message Model wizard." 
+            },
+            {
+              "steps":{
+                "type":"ordered",
+                "details":[
+                  {
+                    "details":"Click the 'New...' link in the navigator, and select 'Message Model...'. The New Message Model wizard launches."
+                  },
+                  {
+                    "details":"Select 'CSV text' and click 'Next'."
+                  },
+                  {
+                    "details":"Select the first option 'Create a DFDL schema file using this wizard to guide you' and click 'Next'."
+                  },
+                  {
+                    "details":"Use the Browse button to select the CommaSeparatedValue library."
+                  },
+                  {
+                    "details":"Enter 'CSV' for 'DFDL schema file name', 'CSV_message' for 'Message name', and click 'Next'."
+                  },
+                  {
+                    "details":"Specify the details of the CSV file. Select 'Any newline' for 'End of record character', check 'The first record is a header', enter '5' for 'Number of fields', select 'CSV Escape Scheme' and click Finish."
+                  }
+                ]
+              }
+            }, 
+            {
+              "section":"Two DFDL schemas are created in the library. Schema CSV.xsd models the overall CSV message. Schema CommaSeparatedFormat.xsd defines suitable default values for DFDL properties."
+            }  
+           ]
+        },
+        "helpLinks":{
+          "title":"Find out more",
+          "details":[
+            {
+              "title":"Knowledge Center link to ",
+              "description":"Working with DFDL schema files",
+              "link":"com.ibm.etools.mft.doc/df20061_.htm"
+            }
+          ]
+        },
+       "actions":{
+          "title": "Create Actions",
+          "details":[
+             {
+               "name": "Import",
+               "method": "importArtifacts()"
+             }
+           ]
+         }
+      },
+      "prepare":{
+        "overview":{
+          "name":"Prepare",
+          "heading":"Imported projects",
+          "_prepareComment":"A description of what just happened when the user clicked Import, and what will happen when the user clicks Deploy.",
+          "sections":[
+            {
+              "section":"The CSV library is shown in the Integration Development view of your workspace."
+            },
+            {
+              "section":"DFDL schema CSV.xsd should be open for you using the DFDL editor. If it is not, double-click the DFDL schema and the editor will open." 
+            },
+            {
+              "section":"CSV_message is highlighted and models a CSV file with a header record and an unbounded number of body records. Each record has four fields. The main editor view shows the logical components of the message such as elements and sequences. You can explore the CSV_message structure by expanding the elements." 
+            },
+            {
+              "section":"The physical rendering of each logical component is described by the DFDL properties in the Representation Properties tab on the right. DFDL properties can either be specified locally on the component, or can be inherited from pre-defined sets of DFDL properties. Inherited properties have an icon <img src='http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlInheritedProperty.png' alt='' /> shown next to them, and hovering over the icon reveals where the property is defined. In this schema, inherited properties are obtained from  CSVFormat.xsd." 
+            },
+            {
+              "section":"You will be test parsing the example CSV file using CSV_message. The test parsing takes place entirely within the DFDL editor, so there is no message flow in this tutorial and no Deploy step. Before test parsing, switch to the DFDL Test perspective using Window->Open Perspective and choose 'DFDL Test' (or use the toolbar icon <img src='http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/changePerspective.png' alt='' />)." 
+            },
+            {
+              "section":"<b>Tip:</b> If this Tutorial Steps View disappears when you switch perspectives, use Window->Show View to add it back."
+            }
+          ]  
+        },
+        "helpLinks":{
+          "title":"Find out more",
+          "details":[
+            {
+              "title":"Knowledge Center link to ",
+              "description":"Working with DFDL schema files",
+              "link":"com.ibm.etools.mft.doc/df20061_.htm"
+            }
+          ]
+        }
+      },
+      "run":{
+        "overview":{
+          "name":"Run",
+          "heading":"Follow these steps to complete the tutorial",
+          "_runComment":"The full steps for the user to run through the tutorial. Use 'sections' to render paragraphs, 'steps' with a type of 'ordered' or 'unordered' to render HTML lists, and 'substeps' to render nested lists.",
+          "sections":[
+            {
+              "section":"CSV.xsd is open in the DFDL editor. CSV_message should be highlighted in green."
+            },
+            {  
+              "steps":{
+                "type":"ordered",
+                "details":[
+                  {
+                    "details":"Test parse an example CSV file:",
+                    "substeps":{
+                      "type":"unordered",
+                      "details":[
+                        {
+                          "details":"Click the Test Parse Model button in the DFDL editor toolbar. The Test Parse Model dialog opens."
+                        },
+                        {
+                          "details":"In the Message section, select CSV_message."
+                        },
+                        {
+                          "details":"In the Parser Input section, select 'Content from a data file' and click Browse."
+                        },
+                        {
+                          "details":"Select file simpleCSV.txt from CommaSeparatedValues and click OK."
+                        },
+                        {
+                          "details":"Set the Encoding to ASCII."
+                        },
+                        {
+                          "details":"Click OK. If asked to confirm switching to the DFDL Test perspective, click 'Yes'."
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "details":"The results of the test parse are displayed. You should see 'Parsing completed successfully' which can be dismissed."
+                  },
+                  {
+                    "details":"You can view the parsed data file in the <b>DFDL Test - Parse</b> view. The results of the parse can be viewed in the <b>DFDL Test - Logical Instance</b> view, as a tree or as XML. You can view a log of the parser actions in the <b>DFDL Test - Trace</b> view."
+                  },
+                  {
+                    "details":"Test serialize the logical instance that resulted from the parse:",
+                    "substeps":{
+                      "type":"unordered",
+                      "details":[
+                        {
+                          "details":"Click the Test Serialize Model button in the DFDL editor toolbar. The Test Serialize Model dialog opens."
+                        },
+                        {
+                          "details":"In the Serializer Input section, select 'Content from a DFDL Test - Logical Instance'."
+                        },
+                        {
+                          "details":"Set the Encoding to ASCII."
+                        },
+                        {
+                          "details":"Click OK."
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "details":"The results of the test serialize are displayed. You should see 'Serialization completed successfully' which can be dismissed."
+                  },
+                  {
+                    "details":"You can view the serialized data file in the <b>DFDL Test - Serialize</b> view. You can view a log of the serializer actions in the <b>DFDL Test - Trace</b> view."
+                  },  
+                  {
+                    "details":"As an alternative to the toolbar buttons, you can also test from the <b>DFDL Test - Parse</b> and <b>DFDL Test - Serialize</b> views, using the Browse button to select a data source and the green play icon <img src='http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlTestPlay.png' alt='' /> to run the DFDL parser or serializer."
+                  }  
+                ]
+              }
+            },  
+            {
+              "section":"You can further refine the DFDL schema that you created. "
+            },
+            {  
+              "steps":{
+                "type":"ordered",
+                "details":[
+                  {
+                     "details":"Switch back to the Integration Development perspective."
+                  },
+                  {
+                     "details":"Give the fields more descriptive names. Expand header and record, click into each field name and overtype."
+                  },
+                  {
+                     "details":"Model the 'date of birth' field as xs:date. Expand record, select the 5th field, click on 'string' and select 'date' from the list of types."
+                  },
+                  {
+                     "details":"Save the updated schema. Check the <b>Problems</b> view; there should be no errors."
+                  },
+                  {
+                     "details":"Use the Test Parse Model button again to test parse using the updated schema."
+                  }   
+                ]
+              }
+            } 
+          ]
+        },
+        "helpLinks":{
+          "title":"Find out more",
+          "details":[
+            {
+              "title":"Knowledge Center link to ",
+              "description":"Testing a DFDL schema file",
+              "link":"com.ibm.etools.mft.doc/df20065_.htm"
+            },
+            {
+              "title":"Knowledge Center link to ",
+              "description":"CSV messaging standard",
+              "link":"com.ibm.etools.mft.doc/ad20830_.htm"
+            }
+          ]
+        },
+	"exits":{
+	  "title": "Run Exits",
+	  "details":[
+	     {
+	     	"name": "Clean Up",
+	     	"description": "Clean up and remove any changes in your workspace made by the tutorial.",
+	     	"method": "cleanUp()"
+	     }
+	   ]
+	 }
+      }
+    }
+  }
+}
