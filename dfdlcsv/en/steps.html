@@ -130,6 +130,9 @@
 								<p> You will now create a DFDL schema to model the example CSV file, using the New Message Model wizard. </p>
 								
 							
+								<p> <b>Tip:</b> Ensure that steps 1 to 6 below are all visible in the Tutorial Steps View before proceeding. </p>
+								
+							
 								<p>  </p>
 								
 								
@@ -201,16 +204,16 @@
 						  	<h4>Imported projects</h4>
 						    
 						    
-								<p> The CSV library is shown in the Integration Development view of your workspace. </p>
+								<p> The CommaSeparatedValues library is shown in the Integration Development view of your workspace. </p>
 								
 							
 								<p> DFDL schema CSV.xsd should be open for you using the DFDL editor. If it is not, double-click the DFDL schema and the editor will open. </p>
 								
 							
-								<p> CSV_message is highlighted and models a CSV file with a header record and an unbounded number of body records. Each record has four fields. The main editor view shows the logical components of the message such as elements and sequences. You can explore the CSV_message structure by expanding the elements. </p>
+								<p> CSV_message is highlighted and models a CSV file with a header record and an unbounded number of body records. Each record has five fields. The main editor view shows the logical components of the message such as elements and sequences. You can explore the CSV_message structure by expanding the elements. </p>
 								
 							
-								<p> The physical rendering of each logical component is described by the DFDL properties in the Representation Properties tab on the right. DFDL properties can either be specified locally on the component, or can be inherited from pre-defined sets of DFDL properties. Inherited properties have an icon <img src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlInheritedProperty.png" alt> shown next to them, and hovering over the icon reveals where the property is defined. In this schema, inherited properties are obtained from  CSVFormat.xsd. </p>
+								<p> The physical rendering of each logical component is described by the DFDL properties in the Representation Properties tab on the right. DFDL properties can either be specified locally on the component, or can be inherited from pre-defined sets of DFDL properties. Inherited properties have an icon <img src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlInheritedProperty.png" alt> shown next to them, and hovering over the icon reveals where the property is defined. In this schema, inherited properties are obtained from CommaSeparatedFormat.xsd. </p>
 								
 							
 								<p> You will be test parsing the example CSV file using CSV_message. The test parsing takes place entirely within the DFDL editor, so there is no message flow in this tutorial and no Deploy step. Before test parsing, switch to the DFDL Test perspective using Window->Open Perspective and choose 'DFDL Test' (or use the toolbar icon <img src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/changePerspective.png" alt>). </p>
@@ -352,6 +355,10 @@
 										</li>
 									
 										<li> Use the Test Parse Model button again to test parse using the updated schema.
+										
+										</li>
+									
+										<li> Check the <b>DFDL Test - Logical Instance</b> view, you will see the new names and types.
 										
 										</li>
 									
