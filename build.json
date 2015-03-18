@@ -1,0 +1,10 @@
+{    
+    "main" : {
+      "project" : "CommaSeparatedValues",
+      "artefact": "simpleCSV.txt",
+      "editor"  : "text"
+    },
+    "bar" : {
+        "build" : false
+    }
+  }
