@@ -79,6 +79,10 @@
           },
           {
             "section":"A CSV file consists of any number of records, each terminated by a new line of some kind. Each record consists of fields, separated by a literal comma. All records have an identical sequence of fields, and the first record is often a header. Double quotation marks are used as 'escape' characters in fields that contain a literal comma or a new line as part of their value."
+          },
+          {
+            "section":"The DFDL editor provides a wizard to help you create a DFDL schema that models your particular CSV file."
+
           }
           ]
         },
@@ -110,23 +114,23 @@
           "_createComment":"A description of what will happen when the user clicks Import.",
           "sections":[
             {
-              "section":"Click <span class='uicontrol'>Import</span>. A a shared library is imported into your workspace."
+              "section":"Click <span class='uicontrol'>Import</span> and a shared library is imported into your workspace."
             },
             {
-              "section":"Library <span class='library'>CommaSeparatedValues</span> contains an example CSV file in the <span class='filepath'>Other resources</span> directory. Open the file and look at the records. The first record is a header, and there are five fields in each record: last name, first name, middle name, address, and date of birth. Note that address field has double quotation marks so that the comma in the address is not treated as a delimiter."
+              "section":"Library <span class='library'>CommaSeparatedValues</span> contains an example CSV file in 'Other resources'. Open the file and look at the records. The first record is a header, and there are five fields in each record: last name, first name, middle name, address, and date of birth. Note that address field has double quotation marks so that the comma in the address is not treated as a delimiter."
             },
             {
               "section":"You will now create a DFDL schema to model the example CSV file, by using the <span class='wintitle'>New Message Model</span> wizard." 
             },
             {
-              "section":"<b>Tip:</b> Ensure that steps 1 to 6 below are all visible in the <span class='uicontrol'>Tutorial Steps View</span> Eclipse view before proceeding." 
+              "section":"<b>Tip:</b> Ensure that steps 1 to 6 below are all visible in the <span class='uicontrol'>Tutorial Steps View</span> view before proceeding." 
             },
             {
               "steps":{
                 "type":"ordered",
                 "details":[
                   {
-                    "details":"Click the <span class='uicontrol'>New...</span> link in the navigator, and select <span class='uicontrol'>Message Model...</span>. The <span class='wintitle'>New Message Model</span> wizard opens."
+                    "details":"Click <span class='uicontrol'>New...</span> in the <span class='uicontrol'>Application Development</span> view, and select <span class='uicontrol'>Message Model...</span>. The <span class='wintitle'>New Message Model</span> wizard opens."
                   },
                   {
                     "details":"Select <span class='uicontrol'>CSV text</span> and click <span class='uicontrol'>Next</span>."
@@ -135,13 +139,13 @@
                     "details":"Select the option <span class='uicontrol'>Create a DFDL schema file using this wizard to guide you</span> and then click <span class='uicontrol'>Next</span>."
                   },
                   {
-                    "details":"Click the <span class='uicontrol'>Browse</span> button and select the <span class='uicontrol'>CommaSeparatedValue</span> library."
+                    "details":"Click the <span class='uicontrol'>Browse</span> button and select the <span class='library'>CommaSeparatedValues</span> library."
                   },
                   {
                     "details":"In the <span class='uicontrol'>DFDL schema file name</span> field, type <span class='userinput'>CSV</span>, and in the <span class='uicontrol'>Message name</span> field, type <span class='userinput'>CSV_message</span>, then click <span class='uicontrol'>Next</span>."
                   },
                   {
-                    "details":"Next, specify the details of the CSV file. In the <span class='uicontrol'>End of record character</span> list, select <span class='userinput'>Any newline</span>. Select the check box <span class='userinput'>The first record is a header</span>. In the <span class='uicontrol'>Number of fields</span> field, type <span class='userinput'>5</span>. Select <span class='userinput'>CSV Escape Scheme</span>, then click <span class='userinput'>Finish</span>."
+                    "details":"Next, specify the details of the CSV file. In the <span class='uicontrol'>End of record character</span> list, select <span class='uicontrol'>Any newline</span>. Select the check box <span class='uicontrol'>The first record is a header</span>. In the <span class='uicontrol'>Number of fields</span> field, type <span class='userinput'>5</span>. Select <span class='uicontrol'>CSV Escape Scheme</span>, then click <span class='uicontrol'>Finish</span>."
                   }
                 ]
               }
@@ -178,22 +182,22 @@
           "_prepareComment":"A description of what just happened when the user clicked Import, and what will happen when the user clicks Deploy.",
           "sections":[
             {
-              "section":"The <span class='library'>CommaSeparatedValues</span> library is shown in the <span class='uicontrol'>Integration Development</span> perspective of your workspace."
+              "section":"The <span class='library'>CommaSeparatedValues</span> library is shown in the <span class='uicontrol'>Application Development</span> view of your workspace."
             },
             {
-              "section":"The <span class='filepath'>CSV.xsd</span> DFDL schema should open in the DFDL editor. If it is not, double-click the DFDL schema and the editor will open." 
+              "section":"The <span class='filepath'>CSV.xsd</span> DFDL schema opens in the DFDL editor. If it does not, double-click the DFDL schema to open it in the editor." 
             },
             {
-              "section":"CSV_message is highlighted. This models a CSV file with a header record and an unbounded number of body records. Each record has five fields. The main editor view shows the logical components of the message, such as elements and sequences. You can explore the CSV_message structure by expanding the elements." 
+              "section":"CSV_message is highlighted and models a CSV file with a header record and an unbounded number of body records. Each record has five fields. The main editor view shows the logical components of the message, such as elements and sequences. You can explore the CSV_message structure by expanding the elements." 
             },
             {
               "section":"The physical rendering of each logical component is described by the DFDL properties in the <span class='uicontrol'>Representation Properties</span> tab. DFDL properties can either be specified locally on the component, or can be inherited from pre-defined sets of DFDL properties. Inherited properties have an icon <img src='http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlInheritedProperty.png' alt='' /> shown next to them, and hovering the cursor over the icon reveals where the property is defined. In this schema, inherited properties are obtained from the <span class='filepath'>CommaSeparatedFormat.xsd</span> file." 
             },
             {
-              "section":"Next, test parse the example CSV file by using CSV_message. The test parsing takes place entirely within the DFDL editor, so there is no message flow in this tutorial, and no Deploy step. Before test parsing, switch to the <span class='uicontrol'>DFDL Test</span> perspective by clicking the menu item <span class='uicontrol'>Window &gt; Open Perspective</span> and then selecting <span class='uicontrol'>DFDL Test</span> (or use the 'Open Perspective' toolbar icon <img src='http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/changePerspective.png' alt='' />)." 
+              "section":"You will be test parsing the example CSV file using CSV_message. The test parsing takes place entirely within the DFDL editor, so there is no message flow in this tutorial, and no Deploy step. Before test parsing, switch to the <span class='uicontrol'>DFDL Test</span> perspective by clicking the menu item <span class='uicontrol'>Window &gt; Open Perspective</span> and then selecting <span class='uicontrol'>DFDL Test</span>. (Alternatively, you can use the toolbar icon <img src='http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/changePerspective.png' alt='' />)." 
             },
             {
-              "section":"<b>Tip:</b> If the <span class='uicontrol'>Tutorial Steps View</span> Eclipse view disappears when you switch perspectives, use the <span class='uicontrol'>Window &gt; Show View</span> menu item to add it back."
+              "section":"<b>Tip:</b> If this <span class='uicontrol'>Tutorial Steps View</span> tab disappears when you switch perspectives, use the <span class='uicontrol'>Window &gt; Show View</span> menu option to add it back."
             }
           ]  
         },
@@ -215,14 +219,14 @@
           "_runComment":"The full steps for the user to run through the tutorial. Use 'sections' to render paragraphs, 'steps' with a type of 'ordered' or 'unordered' to render HTML lists, and 'substeps' to render nested lists.",
           "sections":[
             {
-              "section":"The <span class='filepath'>CSV.xsd</span> file is open in the DFDL editor. CSV_message should be highlighted in green."
+              "section":"The <span class='filepath'>CSV.xsd</span> DFDL schema is open in the DFDL editor. CSV_message should be highlighted in green."
             },
             {  
               "steps":{
                 "type":"ordered",
                 "details":[
                   {
-                    "details":"Test parse an example CSV file:",
+                    "details":"Test parse the example CSV file:",
                     "substeps":{
                       "type":"ordered",
                       "details":[
@@ -236,7 +240,7 @@
                           "details":"In the Parser Input section, select <span class='uicontrol'>Content from a data file</span> then click <span class='uicontrol'>Browse</span>."
                         },
                         {
-                          "details":"Select the <span class='filepath'>simpleCSV.txt</span> file from the <span class='filepath'>CommaSeparatedValues</span> directory, then click <span class='uicontrol'>OK</span>."
+                          "details":"Select the <span class='filepath'>simpleCSV.txt</span> file from <span class='library'>CommaSeparatedValues</span> then click <span class='uicontrol'>OK</span>."
                         },
                         {
                           "details":"Set the Encoding to <span class='uicontrol'>ASCII</span>."
@@ -265,7 +269,7 @@
                           "details":"In the Serializer Input section, select <span class='uicontrol'>Content from a DFDL Test - Logical Instance</span>."
                         },
                         {
-                          "details":"Set the Encoding to ASCII."
+                          "details":"Set the Encoding to <span class='uicontrol'>ASCII</span>."
                         },
                         {
                           "details":"Click <span class='uicontrol'>OK</span>."
@@ -299,7 +303,7 @@
                      "details":"Give the fields more descriptive names. Expand header and record, then click into each field name and type the new field name."
                   },
                   {
-                     "details":"Model the 'date of birth' field as xs:date. Expand record, select the 5th field, click on <span class='uicontrol'>string</span> and select <span class='uicontrol'>date</span> from the list of types."
+                     "details":"Model the 'date of birth' field as <span class='varname'>xs:date</span>. Expand record, select the 5th field, click on <span class='uicontrol'>string</span> and select <span class='uicontrol'>date</span> from the list of types."
                   },
                   {
                      "details":"Save the updated schema. Check the <span class='uicontrol'>Problems</span> view; there should be no errors."
