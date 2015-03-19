@@ -43,7 +43,7 @@
 	</div>
 	<div class="row">
 	  <div class="small-9 medium-9 large-9 columns">
-	    <h4>Modeling CSV data using DFDL</h4>
+	    <h4>Modeling CSV data by using DFDL</h4>
 	  </div>
 	  <div class="small-3 medium-3 large-3 columns">
 		<a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.msgbroker.helphome.doc/help_home_msgbroker.htm')" class="small right helplink">IBM Knowledge Center</a> 
@@ -52,7 +52,7 @@
 	<hr>
 	<div class="row">
 		<div class="small-10 medium-10 large-10 columns">
-		<h5> Learn how to model CSV data using DFDL by exploring this simple example. </h5>
+		<h5> Learn how to model CSV data by using Data Format Description Language (DFDL). </h5>
 		</div>
 		<div class="small-2 medium-2 large-2 columns">
 			<div class="small radius button right" id="backToGallery" onclick="backToGallery()"> Back To Gallery
@@ -83,9 +83,11 @@
 					      	<h4>Overview</h4>
 					        
 						    
-								<p>  CSV is a data format for storing tabular data in the form of text records. For example, it can be used as an export format for spreadsheets and databases.  </p>
+								<p> CSV is a data format for storing tabular data in the form of text records. For example, it can be used as an export format for spreadsheets and databases.  </p>
 							
-								<p>  A CSV file consists of any number of records, each terminated by a new line of some kind. Each record consists of fields, separated by a literal comma. All records have an identical sequence of fields, and the first record is often a header. Double quotes are used to 'escape' fields that contain a literal comma or new line as part of their value. </p>
+								<p> A CSV file consists of any number of records, each terminated by a new line of some kind. Each record consists of fields, separated by a literal comma. All records have an identical sequence of fields, and the first record is often a header. Double quotation marks are used as 'escape' characters in fields that contain a literal comma or a new line as part of their value. </p>
+							
+								<p> The DFDL editor provides a wizard to help you create a DFDL schema that models your particular CSV file. </p>
 							
 						</div>
 							
@@ -121,16 +123,16 @@
 					      	<h4>Import projects</h4>
 					        
 						    
-								<p> Click 'Import' and a shared library is imported into your workspace. </p>
+								<p> Click <span class="uicontrol">Import</span> and a shared library is imported into your workspace. </p>
 								
 							
-								<p> Library CommaSeparatedValues contains an example CSV file in 'Other resources'. Open the file and look at the records. The first record is a header, and there are five fields in each record; last name, first name, middle name, address and date of birth. Note that address has double quotes so that the comma in the address is not treated as a delimiter. </p>
+								<p> Library <span class="library">CommaSeparatedValues</span> contains an example CSV file in 'Other resources'. Open the file and look at the records. The first record is a header, and there are five fields in each record: last name, first name, middle name, address, and date of birth. Note that address field has double quotation marks so that the comma in the address is not treated as a delimiter. </p>
 								
 							
-								<p> You will now create a DFDL schema to model the example CSV file, using the New Message Model wizard. </p>
+								<p> You will now create a DFDL schema to model the example CSV file, by using the <span class="wintitle">New Message Model</span> wizard. </p>
 								
 							
-								<p> <b>Tip:</b> Ensure that steps 1 to 6 below are all visible in the Tutorial Steps View before proceeding. </p>
+								<p> <b>Tip:</b> Ensure that steps 1 to 6 below are all visible in the <span class="uicontrol">Tutorial Steps View</span> view before proceeding. </p>
 								
 							
 								<p>  </p>
@@ -140,27 +142,27 @@
 									<ol>
 									
 									
-										<li> Click the 'New...' link in the navigator, and select 'Message Model...'. The New Message Model wizard launches.
+										<li> Click <span class="uicontrol">New...</span> in the <span class="uicontrol">Application Development</span> view, and select <span class="uicontrol">Message Model...</span>. The <span class="wintitle">New Message Model</span> wizard opens.
 										
 										</li>
 									
-										<li> Select 'CSV text' and click 'Next'.
+										<li> Select <span class="uicontrol">CSV text</span> and click <span class="uicontrol">Next</span>.
 										
 										</li>
 									
-										<li> Select the first option 'Create a DFDL schema file using this wizard to guide you' and click 'Next'.
+										<li> Select the option <span class="uicontrol">Create a DFDL schema file using this wizard to guide you</span> and then click <span class="uicontrol">Next</span>.
 										
 										</li>
 									
-										<li> Use the Browse button to select the CommaSeparatedValue library.
+										<li> Click the <span class="uicontrol">Browse</span> button and select the <span class="library">CommaSeparatedValues</span> library.
 										
 										</li>
 									
-										<li> Enter 'CSV' for 'DFDL schema file name', 'CSV_message' for 'Message name', and click 'Next'.
+										<li> In the <span class="uicontrol">DFDL schema file name</span> field, type <span class="userinput">CSV</span>, and in the <span class="uicontrol">Message name</span> field, type <span class="userinput">CSV_message</span>, then click <span class="uicontrol">Next</span>.
 										
 										</li>
 									
-										<li> Specify the details of the CSV file. Select 'Any newline' for 'End of record character', check 'The first record is a header', enter '5' for 'Number of fields', select 'CSV Escape Scheme' and click Finish.
+										<li> Next, specify the details of the CSV file. In the <span class="uicontrol">End of record character</span> list, select <span class="uicontrol">Any newline</span>. Select the check box <span class="uicontrol">The first record is a header</span>. In the <span class="uicontrol">Number of fields</span> field, type <span class="userinput">5</span>. Select <span class="uicontrol">CSV Escape Scheme</span>, then click <span class="uicontrol">Finish</span>.
 										
 										</li>
 									
@@ -169,7 +171,7 @@
 									
 								
 							
-								<p> Two DFDL schemas are created in the library. Schema CSV.xsd models the overall CSV message. Schema CommaSeparatedFormat.xsd defines suitable default values for DFDL properties. </p>
+								<p> Two DFDL schemas are created in the library. The <span class="filepath">CSV.xsd</span> schema file models the overall CSV message. The <span class="filepath">CommaSeparatedFormat.xsd</span> schema file defines suitable default values for DFDL properties. </p>
 								
 							
 						</div>
@@ -204,22 +206,22 @@
 						  	<h4>Imported projects</h4>
 						    
 						    
-								<p> The CommaSeparatedValues library is shown in the Integration Development view of your workspace. </p>
+								<p> The <span class="library">CommaSeparatedValues</span> library is shown in the <span class="uicontrol">Application Development</span> view of your workspace. </p>
 								
 							
-								<p> DFDL schema CSV.xsd should be open for you using the DFDL editor. If it is not, double-click the DFDL schema and the editor will open. </p>
+								<p> The <span class="filepath">CSV.xsd</span> DFDL schema opens in the DFDL editor. If it does not, double-click the DFDL schema to open it in the editor. </p>
 								
 							
-								<p> CSV_message is highlighted and models a CSV file with a header record and an unbounded number of body records. Each record has five fields. The main editor view shows the logical components of the message such as elements and sequences. You can explore the CSV_message structure by expanding the elements. </p>
+								<p> CSV_message is highlighted and models a CSV file with a header record and an unbounded number of body records. Each record has five fields. The main editor view shows the logical components of the message, such as elements and sequences. You can explore the CSV_message structure by expanding the elements. </p>
 								
 							
-								<p> The physical rendering of each logical component is described by the DFDL properties in the Representation Properties tab on the right. DFDL properties can either be specified locally on the component, or can be inherited from pre-defined sets of DFDL properties. Inherited properties have an icon <img src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlInheritedProperty.png" alt> shown next to them, and hovering over the icon reveals where the property is defined. In this schema, inherited properties are obtained from CommaSeparatedFormat.xsd. </p>
+								<p> The physical rendering of each logical component is described by the DFDL properties in the <span class="uicontrol">Representation Properties</span> tab. DFDL properties can either be specified locally on the component, or can be inherited from pre-defined sets of DFDL properties. Inherited properties have an icon <img src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlInheritedProperty.png" alt> shown next to them, and hovering the cursor over the icon reveals where the property is defined. In this schema, inherited properties are obtained from the <span class="filepath">CommaSeparatedFormat.xsd</span> file. </p>
 								
 							
-								<p> You will be test parsing the example CSV file using CSV_message. The test parsing takes place entirely within the DFDL editor, so there is no message flow in this tutorial and no Deploy step. Before test parsing, switch to the DFDL Test perspective using Window->Open Perspective and choose 'DFDL Test' (or use the toolbar icon <img src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/changePerspective.png" alt>). </p>
+								<p> You will be test parsing the example CSV file using CSV_message. The test parsing takes place entirely within the DFDL editor, so there is no message flow in this tutorial, and no Deploy step. Before test parsing, switch to the <span class="uicontrol">DFDL Test</span> perspective by clicking the menu item <span class="uicontrol">Window &gt; Open Perspective</span> and then selecting <span class="uicontrol">DFDL Test</span>. (Alternatively, you can use the toolbar icon <img src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/changePerspective.png" alt>). </p>
 								
 							
-								<p> <b>Tip:</b> If this Tutorial Steps View disappears when you switch perspectives, use Window->Show View to add it back. </p>
+								<p> <b>Tip:</b> If this <span class="uicontrol">Tutorial Steps View</span> tab disappears when you switch perspectives, use the <span class="uicontrol">Window &gt; Show View</span> menu option to add it back. </p>
 								
 							
 						</div>
@@ -247,7 +249,7 @@
 					      	<h4>Follow these steps to complete the tutorial</h4>
 					        
 						    
-								<p> CSV.xsd is open in the DFDL editor. CSV_message should be highlighted in green. </p>
+								<p> The <span class="filepath">CSV.xsd</span> DFDL schema is open in the DFDL editor. CSV_message should be highlighted in green. </p>
 								
 							
 								<p>  </p>
@@ -257,36 +259,36 @@
 									<ol>
 									
 									
-										<li> Test parse an example CSV file:
+										<li> Test parse the example CSV file:
 										
 										
 											
-											<ul>
+											<ol>
 											
 												
-													<li> Click the Test Parse Model button in the DFDL editor toolbar. The Test Parse Model dialog opens.</li>
+													<li> Click the <span class="uicontrol">Test Parse Model</span> button in the DFDL editor toolbar. The <span class="wintitle">Test Parse Model</span> window opens.</li>
 												
-													<li> In the Message section, select CSV_message.</li>
+													<li> In the Message section, select <span class="uicontrol">CSV_message</span>.</li>
 												
-													<li> In the Parser Input section, select 'Content from a data file' and click Browse.</li>
+													<li> In the Parser Input section, select <span class="uicontrol">Content from a data file</span> then click <span class="uicontrol">Browse</span>.</li>
 												
-													<li> Select file simpleCSV.txt from CommaSeparatedValues and click OK.</li>
+													<li> Select the <span class="filepath">simpleCSV.txt</span> file from <span class="library">CommaSeparatedValues</span> then click <span class="uicontrol">OK</span>.</li>
 												
-													<li> Set the Encoding to ASCII.</li>
+													<li> Set the Encoding to <span class="uicontrol">ASCII</span>.</li>
 												
-													<li> Click OK. If asked to confirm switching to the DFDL Test perspective, click 'Yes'.</li>
+													<li> Click <span class="uicontrol">OK</span>. If asked to confirm switching to the DFDL Test perspective, click <span class="uicontrol">Yes</span>.</li>
 												
 											
-											</ul>
+											</ol>
 											
-										
-										</li>
-									
-										<li> The results of the test parse are displayed. You should see 'Parsing completed successfully' which can be dismissed.
 										
 										</li>
 									
-										<li> You can view the parsed data file in the <b>DFDL Test - Parse</b> view. The results of the parse can be viewed in the <b>DFDL Test - Logical Instance</b> view, as a tree or as XML. You can view a log of the parser actions in the <b>DFDL Test - Trace</b> view.
+										<li> The results of the test parse are displayed. You should see the message <span class="systemoutput">Parsing completed successfully</span>. You can dismiss this message.
+										
+										</li>
+									
+										<li> You can view the parsed data file in the <span class="uicontrol">DFDL Test - Parse</span> view. The results of the parse can be viewed in the <span class="uicontrol">DFDL Test - Logical Instance</span> view, as a tree or as XML. You can view a log of the parser actions in the <span class="uicontrol">DFDL Test - Trace</span> view.
 										
 										</li>
 									
@@ -294,32 +296,32 @@
 										
 										
 											
-											<ul>
+											<ol>
 											
 												
-													<li> Click the Test Serialize Model button in the DFDL editor toolbar. The Test Serialize Model dialog opens.</li>
+													<li> Click the <span class="uicontrol">Test Serialize Model</span> button in the DFDL editor toolbar. The <span class="wintitle">Test Serialize Model</span> window opens.</li>
 												
-													<li> In the Serializer Input section, select 'Content from a DFDL Test - Logical Instance'.</li>
+													<li> In the Serializer Input section, select <span class="uicontrol">Content from a DFDL Test - Logical Instance</span>.</li>
 												
-													<li> Set the Encoding to ASCII.</li>
+													<li> Set the Encoding to <span class="uicontrol">ASCII</span>.</li>
 												
-													<li> Click OK.</li>
+													<li> Click <span class="uicontrol">OK</span>.</li>
 												
 											
-											</ul>
+											</ol>
 											
 										
 										</li>
 									
-										<li> The results of the test serialize are displayed. You should see 'Serialization completed successfully' which can be dismissed.
+										<li> The results of the test serialize are displayed. You should see the message <span class="systemoutput">Serialization completed successfully</span>. You can dismiss this message.
 										
 										</li>
 									
-										<li> You can view the serialized data file in the <b>DFDL Test - Serialize</b> view. You can view a log of the serializer actions in the <b>DFDL Test - Trace</b> view.
+										<li> You can view the serialized data file in the <span class="uicontrol">DFDL Test - Serialize</span> view. You can view a log of the serializer actions in the <span class="uicontrol">DFDL Test - Trace</span> view.
 										
 										</li>
 									
-										<li> As an alternative to the toolbar buttons, you can also test from the <b>DFDL Test - Parse</b> and <b>DFDL Test - Serialize</b> views, using the Browse button to select a data source and the green play icon <img src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlTestPlay.png" alt> to run the DFDL parser or serializer.
+										<li> As an alternative to the toolbar buttons, you can also test from the <span class="uicontrol">DFDL Test - Parse</span> and <span class="uicontrol">DFDL Test - Serialize</span> views, using the <span class="uicontrol">Browse</span> button to select a data source and the green play icon <img src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlTestPlay.png" alt> to run the DFDL parser or serializer.
 										
 										</li>
 									
@@ -328,7 +330,7 @@
 									
 								
 							
-								<p> You can further refine the DFDL schema that you created.  </p>
+								<p> Optional: You can further refine the DFDL schema that you created.  </p>
 								
 							
 								<p>  </p>
@@ -338,27 +340,27 @@
 									<ol>
 									
 									
-										<li> Switch back to the Integration Development perspective.
+										<li> Switch back to the <span class="uicontrol">Integration Development</span> perspective.
 										
 										</li>
 									
-										<li> Give the fields more descriptive names. Expand header and record, click into each field name and overtype.
+										<li> Give the fields more descriptive names. Expand header and record, then click into each field name and type the new field name.
 										
 										</li>
 									
-										<li> Model the 'date of birth' field as xs:date. Expand record, select the 5th field, click on 'string' and select 'date' from the list of types.
+										<li> Model the 'date of birth' field as <span class="varname">xs:date</span>. Expand record, select the 5th field, click on <span class="uicontrol">string</span> and select <span class="uicontrol">date</span> from the list of types.
 										
 										</li>
 									
-										<li> Save the updated schema. Check the <b>Problems</b> view; there should be no errors.
+										<li> Save the updated schema. Check the <span class="uicontrol">Problems</span> view; there should be no errors.
 										
 										</li>
 									
-										<li> Use the Test Parse Model button again to test parse using the updated schema.
+										<li> Use the <span class="uicontrol">Test Parse Model</span> button again to test parse using the updated schema.
 										
 										</li>
 									
-										<li> Check the <b>DFDL Test - Logical Instance</b> view, you will see the new names and types.
+										<li> Check the <span class="uicontrol">DFDL Test - Logical Instance</span> view. The new field names and data types are displayed.
 										
 										</li>
 									
