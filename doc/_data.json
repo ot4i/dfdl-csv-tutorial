@@ -151,7 +151,7 @@
               }
             }, 
             {
-              "section":"Two DFDL schemas are created in the library. The <span class='filepath'>CSV.xsd</span> schema file models the overall CSV message. The <span class='filepath'>CommaSeparatedFormat.xsd</span> schema file defines suitable default values for DFDL properties."
+              "section":"Two DFDL schemas are created in the library. The <span class='filepath'>CSV.xsd</span> schema models the overall CSV message. The <span class='filepath'>CommaSeparatedFormat.xsd</span> schema defines suitable default values for DFDL properties."
             }  
            ]
         },
@@ -178,7 +178,7 @@
       "prepare":{
         "overview":{
           "name":"Prepare",
-          "heading":"Imported projects",
+          "heading":"Exploring the schemas",
           "_prepareComment":"A description of what just happened when the user clicked Import, and what will happen when the user clicks Deploy.",
           "sections":[
             {
@@ -246,7 +246,7 @@
                           "details":"Set the Encoding to <span class='uicontrol'>ASCII</span>."
                         },
                         {
-                          "details":"Click <span class='uicontrol'>OK</span>. If asked to confirm switching to the DFDL Test perspective, click <span class='uicontrol'>Yes</span>."
+                          "details":"Click <span class='uicontrol'>OK</span>. If asked to confirm switching to the <span class='uicontrol'>DFDL Test</span> perspective, click <span class='uicontrol'>Yes</span>."
                         }
                       ]
                     }
