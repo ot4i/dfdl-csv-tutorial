@@ -18,12 +18,20 @@
                     "name": "Start Tutorial",
 					"method": "startTutorialFromDetailsScreen()",
 					"idName": "startTutorial"
+                },
+	        "buttonViewDetails":
+                                {
+                    "name": "View Details",
+                                        "method": "viewDetails()",
+                                        "idName": "stepsViewDetails"	
                 }
             }
         }
     },
-  "tutorial":{
-    "_common":{
+  "tutorial":
+        {
+    "_common":
+             {
       "name":"Modeling CSV data by using DFDL",
       "shortDescription":"Learn how to model CSV data by using Data Format Description Language (DFDL).",
       "durationText":"This tutorial takes approximately",
@@ -36,7 +44,8 @@
            "link": "/com.ibm.etools.msgbroker.helphome.doc/help_home_msgbroker.htm"
         }
     },
-    "pageDetails":{
+    "pageDetails":
+        {
       "topicsName":"Tutorial Topics",
       "_topicListComment":"A short list of product concepts or tasks demonstrated by this tutorial",
       "topicList":[
@@ -63,17 +72,7 @@
         "sections":[
           {
             "section":"This tutorial demonstrates how to model Comma Separated Value (CSV) data by using DFDL schema."
-          }  
-        ]
-      }
-    },
-    "pageSteps":{
-      "concept":{
-        "overview":{
-          "name":"Overview",
-          "heading":"Overview",
-          "_overviewComment":"A short description of what this tutorial does, and what the user will do to run the tutorial.",
-        "sections":[
+          },  
           {
             "section":"CSV is a data format for storing tabular data in the form of text records. For example, it can be used as an export format for spreadsheets and databases. "
           },
@@ -84,29 +83,10 @@
             "section":"The DFDL editor provides a wizard to help you create a DFDL schema that models your particular CSV file."
 
           }
-          ]
-        },
-        "helpLinks":{
-          "title":"Find out more",
-          "details":[
-            {
-              "title":"Knowledge Center link to ",
-              "description":"Message modeling overview",
-              "link":"com.ibm.etools.mft.doc/bd40430_.htm"
-            },
-            {
-              "title":"Knowledge Center link to ",
-              "description":"How to model data with DFDL",
-              "link":"com.ibm.etools.mft.doc/df20125_.htm"
-            },
-            {
-              "title":"Knowledge Center link to ",
-              "description":"CSV messaging standard",
-              "link":"com.ibm.etools.mft.doc/ad20830_.htm"
-            }
-          ]
-        }
-      },
+        ]
+      }
+    },
+    "pageSteps":{
       "create":{
         "overview":{
           "name":"Create",
@@ -160,8 +140,18 @@
           "details":[
             {
               "title":"Knowledge Center link to ",
-              "description":"Working with DFDL schema files",
-              "link":"com.ibm.etools.mft.doc/df20061_.htm"
+              "description":"Message modeling overview",
+              "link":"com.ibm.etools.mft.doc/bd40430_.htm"
+            },
+            {
+              "title":"Knowledge Center link to ",
+              "description":"How to model data with DFDL",
+              "link":"com.ibm.etools.mft.doc/df20125_.htm"
+            },
+            {
+              "title":"Knowledge Center link to ",
+              "description":"CSV messaging standard",
+              "link":"com.ibm.etools.mft.doc/ad20830_.htm"
             }
           ]
         },
