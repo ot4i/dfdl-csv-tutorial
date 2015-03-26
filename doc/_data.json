@@ -1,5 +1,5 @@
 {
-  "version":"0.6",
+  "version":"0.5",
     "pageContent": 
 	{
         "_comments": "JSON object that contains data for page labels, buttons, etc.",
@@ -84,26 +84,6 @@
 
           }
         ]
-      },
-      "helpLinks":{
-          "title":"Find out more",
-          "details":[
-            {
-              "title":"Knowledge Center link to ",
-              "description":"Message modeling overview",
-              "link":"com.ibm.etools.mft.doc/bd40430_.htm"
-            },
-            {
-              "title":"Knowledge Center link to ",
-              "description":"How to model data with DFDL",
-              "link":"com.ibm.etools.mft.doc/df20125_.htm"
-            },
-            {
-              "title":"Knowledge Center link to ",
-              "description":"CSV messaging standard",
-              "link":"com.ibm.etools.mft.doc/ad20830_.htm"
-            }
-          ]
       }
     },
     "pageSteps":{
@@ -160,8 +140,18 @@
           "details":[
             {
               "title":"Knowledge Center link to ",
-              "description":"Working with DFDL schema files",
-              "link":"com.ibm.etools.mft.doc/df20061_.htm"
+              "description":"Message modeling overview",
+              "link":"com.ibm.etools.mft.doc/bd40430_.htm"
+            },
+            {
+              "title":"Knowledge Center link to ",
+              "description":"How to model data with DFDL",
+              "link":"com.ibm.etools.mft.doc/df20125_.htm"
+            },
+            {
+              "title":"Knowledge Center link to ",
+              "description":"CSV messaging standard",
+              "link":"com.ibm.etools.mft.doc/ad20830_.htm"
             }
           ]
         },
