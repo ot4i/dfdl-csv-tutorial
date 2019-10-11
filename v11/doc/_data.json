@@ -318,7 +318,7 @@
                      "details":"Give the fields more descriptive names. Expand header and record, then click into each field name and type the new field name."
                   },
                   {
-                     "details":"Model the 'date of birth' field as <span class='varname'>xs:date</span>. Expand record, select the 5th field, click on <span class='uicontrol'>string</span> and select <span class='uicontrol'>date</span> from the list of types."
+                     "details":"Model the 'date of birth' field as <span class='varname'>xs:date</span>. Expand record, select the 5th field, click on <span class='uicontrol'>string</span> and select <span class='uicontrol'>date</span> from the list of types. Be sure you make this change to the data type of the 5th field in the <span class='uicontrol'>record</span> structure, not in the <span class='uicontrol'>header</span> structure (all the fields in the header should be modelled as string)."
                   },
                   {
                      "details":"Save the updated schema. Check the <span class='uicontrol'>Problems</span> view; there should be no errors."
