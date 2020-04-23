@@ -41,7 +41,7 @@
       "helpLink": 
 	{
            "text": "IBM Knowledge Center",
-           "link": "/com.ibm.ace.home.doc/help_home.htm"
+           "link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.ace.home.doc/help_home.htm"
         }
     },
     "pageDetails":
@@ -91,17 +91,20 @@
             {
               "title":"Knowledge Center link to ",
               "description":"Message modeling overview",
-              "link":"com.ibm.etools.mft.doc/bd40430_.htm"
+              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bd40430_.htm",
+			  "type":"web"
             },
             {
               "title":"Knowledge Center link to ",
               "description":"How to model data with DFDL",
-              "link":"com.ibm.etools.mft.doc/df20125_.htm"
+              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/df20125_.htm",
+			  "type":"web"
             },
             {
               "title":"Knowledge Center link to ",
               "description":"CSV messaging standard",
-              "link":"com.ibm.etools.mft.doc/ad20830_.htm"
+              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/ad20830_.htm",
+			  "type":"web"
             }
           ]
       }
@@ -161,22 +164,26 @@
             {
               "title":"Knowledge Center link to ",
               "description":"Message modeling overview",
-              "link":"com.ibm.etools.mft.doc/bd40430_.htm"
+              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bd40430_.htm",
+			  "type":"web"
             },
             {
               "title":"Knowledge Center link to ",
               "description":"How to model data with DFDL",
-              "link":"com.ibm.etools.mft.doc/df20125_.htm"
+              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/df20125_.htm",
+			  "type":"web"
             },
             {
               "title":"Knowledge Center link to ",
               "description":"CSV messaging standard",
-              "link":"com.ibm.etools.mft.doc/ad20830_.htm"
+              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/ad20830_.htm",
+			  "type":"web"	
             },
             {
               "title":"Knowledge Center link to ",
               "description":"Working with DFDL schema files",
-              "link":"com.ibm.etools.mft.doc/df20061_.htm"
+              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/df20061_.htm",
+			  "type":"web"
             }
           ]
         },
@@ -212,7 +219,7 @@
               "section":"You will be test parsing the example CSV file using CSV_message. The test parsing takes place entirely within the DFDL editor, so there is no message flow in this tutorial, and no Deploy step. Before test parsing, switch to the <span class='uicontrol'>DFDL Test</span> perspective by clicking the menu item <span class='uicontrol'>Window &gt; Open Perspective</span> and then selecting <span class='uicontrol'>DFDL Test</span>. (Alternatively, you can use the toolbar icon <img src='http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/changePerspective.png' alt='' />)." 
             },
             {
-              "section":"<b>Tip:</b> If this <span class='uicontrol'>Tutorial Steps View</span> tab disappears when you switch perspectives, use the <span class='uicontrol'>Window &gt; Show View</span> menu option to add it back."
+              "section":"<b>Tip:</b> If this <span class='uicontrol'>Tutorial Steps View</span> tab disappears when you switch perspectives, to add it back, use the <span class='uicontrol'>Window &gt; Show View &gt; Other</span> menu option. In the resulting <span class='uicontrol'>Show View</span> dialog, open the Sample Category folder, choose Tutorial Steps View and click OK."
             }
           ]  
         },
@@ -222,7 +229,8 @@
             {
               "title":"Knowledge Center link to ",
               "description":"Working with DFDL schema files",
-              "link":"com.ibm.etools.mft.doc/df20061_.htm"
+              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/df20061_.htm",
+			  "type":"web"
             }
           ]
         }
@@ -340,12 +348,14 @@
             {
               "title":"Knowledge Center link to ",
               "description":"Testing a DFDL schema file",
-              "link":"com.ibm.etools.mft.doc/df20065_.htm"
+              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/df20065_.htm",
+			  "type":"web"
             },
             {
               "title":"Knowledge Center link to ",
               "description":"CSV messaging standard",
-              "link":"com.ibm.etools.mft.doc/ad20830_.htm"
+              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/ad20830_.htm",
+			  "type":"web"
             }
           ]
         },
